@@ -1,0 +1,108 @@
+*,*:before,*:after {
+  box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+}
+
+.plane {
+  margin: 20px auto;
+  max-width: 300px;
+}
+
+.cockpit {
+  height: 250px; 
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  border-bottom: 5px solid #d8d8d8;
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 500px;
+    width: 100%;
+    border-radius: 50%;
+    border-right: 5px solid #d8d8d8;
+    border-left: 5px solid #d8d8d8;
+  }
+  h1 {
+    width: 60%;
+    margin: 100px auto 35px auto;
+  }
+}
+
+.exit {
+  position: relative;
+  height: 50px;
+  ::before,
+  ::after {
+    content: "EXIT";
+    font-size: 14px;
+    line-height: 18px;
+    padding: 0px 2px;
+    font-family: "Arial Narrow", Arial, sans-serif;
+    display: block;
+    position: absolute;
+    background: green;
+    color: white;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+  ::before {
+    left: 0;
+  }
+  ::after {
+    right: 0;
+  }
+}
+
+.fuselage {
+  border-right: 5px solid #d8d8d8;
+  border-left: 5px solid #d8d8d8;
+}
+
+ol {
+  list-style :none;
+  padding: 0;
+  margin: 0;
+}
+
+
+
+#place {
+  width: '30px';
+  height: '30px';
+  display: 'flex';
+  justify-content: 'center';
+  align-items: 'center'
+}
+
+.seats-international {
+  :nth-child(3) {
+    margin-right: 13.7%;
+  }
+}
+
+.seats-local {
+  :nth-child(2) {
+    margin-right: 42.5%;
+  }
+}
+
+.seats-regional {
+  :nth-child(3) {
+    margin-right: 28.5%;
+  }
+}
+
+.seat { 
+  margin-right: 19px;
+
+}
+
+.not-logged {
+  cursor: "not-allowed"
+}
